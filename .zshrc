@@ -2,12 +2,13 @@
 # Last updated 5/10/20 by Aditya.
 
 
-
 # Part 1: Environment Variables
 # Set custom $PATH
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Set $EDITOR to sublime (symlinked in ~/bin)
 export EDITOR="subl"
+# GPG_TTY fix (see github.com/keybase/keybase-issues/issues/2798)
+export GPG_TTY=$(tty)
 
 
 # Part 2: Antigen Packages
