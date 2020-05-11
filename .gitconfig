@@ -1,4 +1,7 @@
 [user]
+	email = 15635979+applecrazy@users.noreply.github.com
+	name = Aditya Rathod
+	signingkey = ABC3F0EBFF50A1D517C243C1EB5F2F9DC301DA51
 [core]
 	autocrlf = input
 [filter "lfs"]
