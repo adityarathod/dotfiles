@@ -36,6 +36,9 @@ alias lsa="ls -lah"
 # Make color diffs the default
 alias diff="diff --color"
 
+# Part 4: Custom keybinds
+bindkey "\e\e[D" backward-word
+bindkey "\e\e[C" forward-word
 
-# Part 4: Dotfile configuration
+# Part 5: Dotfile configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
