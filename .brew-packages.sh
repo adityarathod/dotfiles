@@ -10,4 +10,5 @@ brew upgrade
 # Install packages
 # Antigen: Zsh plugin manager
 brew install antigen
+# GnuPG: GPG implementation
 brew install gnupg
