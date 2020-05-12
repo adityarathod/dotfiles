@@ -1,0 +1,50 @@
+#+title: Emacs configuration
+
+* Clean up UI
+
+** Disable menubar
+   #+begin_src emacs-lisp
+     (menu-bar-mode -1)
+   #+end_src
+
+** Disable toolbar
+   #+begin_src emacs-lisp
+     (tool-bar-mode -1)
+   #+end_src
+
+** Load snazzy theme
+   #+begin_src emacs-lisp
+     (load-theme 'snazzy t)
+   #+end_src
+
+
+* Add some extra org-mode keybinds 
+
+** Bind C-c l to =org-store-link=
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-c l") 'org-store-link)
+   #+end_src
+
+** Bind C-c a to =org-store-agenda=
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-c a") 'org-agenda)
+   #+end_src
+
+** Bind C-c c to =org-capture=
+   #+begin_src emacs-lisp
+     (global-set-key (kbd "C-c c") 'org-capture)
+   #+end_src
+
+
+* More org-mode config
+
+** Set notes to done tasks
+   #+begin_src emacs-lisp
+     (setq org-log-done 'note)
+   #+end_src
+
+** Add fancy bullets
+   #+begin_src emacs-lisp
+     (require 'org-bullets)
+     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+   #+end_src
