@@ -12,3 +12,10 @@ brew upgrade
 brew install antigen
 # GnuPG: GPG implementation
 brew install gnupg
+
+# Add casks
+brew cask install visual-studio-code
+brew cask install sublime-text
+brew cask install emacs
+brew cask install flux
+brew cask install dropbox
