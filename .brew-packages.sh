@@ -1,5 +1,5 @@
 # .brew-packages.sh
-# Last updated 5/10/20 by Aditya.
+# Last updated 5/12/20 by Aditya.
 
 
 # Part 1: Update and upgrade brew
@@ -27,7 +27,7 @@ brew cask install emacs-mac
 brew cask install flux
 # Dropbox
 brew cask install dropbox
-# MacTex (needed for org-mode LaTeX integration)
+# MacTeX (needed for org-mode LaTeX integration)
 brew cask install mactex
 # Fira Code programming font (also used in my Emacs config)
 brew tap homebrew/cask-fonts
