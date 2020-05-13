@@ -7,15 +7,28 @@ brew update
 brew upgrade
 
 
-# Install packages
+# Part 2: Install packages
 # Antigen: Zsh plugin manager
 brew install antigen
 # GnuPG: GPG implementation
 brew install gnupg
+# ISpell: Spell checker
+brew install aspell
 
-# Add casks
+# Part 3: Install casks
+# VS Code
 brew cask install visual-studio-code
+# ST3
 brew cask install sublime-text
-brew cask install emacs
+# Emacs (Yamamoto Mac port)
+brew tap railwaycat/emacsmacport
+brew cask install emacs-mac
+# F.lux
 brew cask install flux
+# Dropbox
 brew cask install dropbox
+# MacTex (needed for org-mode LaTeX integration)
+brew cask install mactex
+# Fira Code programming font (also used in my Emacs config)
+brew tap homebrew/cask-fonts
+brew cask install font-fira-code
