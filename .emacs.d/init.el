@@ -4,7 +4,7 @@
 (add-to-list 'package-archives
 	     '("org" . "https://orgmode.org/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
 
 (require 'org)
@@ -17,8 +17,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files (quote ("~/Dropbox/org/general.org")))
- '(package-selected-packages (quote (org-bullets org snazzy-theme))))
+ '(package-selected-packages
+   (quote
+    (gnu-elpa-keyring-update auto-correct org-fragtog yasnippet-snippets yasnippet auctex cdlatex org-preview-html org-bullets org snazzy-theme)))
+ '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

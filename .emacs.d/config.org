@@ -1,6 +1,50 @@
-#+title: Emacs configuration
+#+title: Emacs Configuration
+
+* Configure and ensure the presence of certain packages
+** Ensure =use-package= is installed first
+   #+begin_src emacs-lisp
+     (unless (package-installed-p 'use-package)
+       (package-refresh-contents)
+       (package-install 'use-package))
+   #+end_src
+
+** Ensure =which-key= is installed, enable =which-key= minor mode
+   #+begin_src emacs-lisp
+     (use-package which-key
+		  :ensure t
+		  :config (which-key-mode))
+   #+end_src
+
+** Ensure =org-bullets= is installed, add a hook to run whenever org-mode is enabled
+   #+begin_src emacs-lisp
+     (use-package org-bullets
+       :ensure t
+       :config
+       (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+   #+end_src
+
+* Hooks
+** After init hook to maximize window
+   #+begin_src emacs-lisp
+     (add-hook 'after-init-hook '(lambda () (toggle-frame-maximized)))
+   #+end_src
+
+** After org-mode hook to initialize CDLaTeX
+   #+begin_src emacs-lisp
+     (add-hook 'org-mode-hook 'turn-on-org-cdlatex)
+   #+end_src
 
 * Clean up UI
+** Inhibit startup screen
+   We don't need the startup screen.
+   #+begin_src emacs-lisp
+     (setq inhibit-startup-message t)
+   #+end_src
+
+** Custom font
+   #+begin_src emacs-lisp
+     (set-default-font "-*-Fira Code-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+   #+end_src
 
 ** Disable menubar
    #+begin_src emacs-lisp
@@ -17,9 +61,17 @@
      (load-theme 'snazzy t)
    #+end_src
 
+** Add snippets
+   #+begin_src emacs-lisp
+     (yas-global-mode 1)
+   #+end_src
+
+** Add line numbers for sanity
+   #+begin_src emacs-lisp
+     (display-line-numbers-mode)
+   #+end_src
 
 * Add some extra org-mode keybinds 
-
 ** Bind C-c l to =org-store-link=
    #+begin_src emacs-lisp
      (global-set-key (kbd "C-c l") 'org-store-link)
@@ -35,16 +87,31 @@
      (global-set-key (kbd "C-c c") 'org-capture)
    #+end_src
 
-
 * More org-mode config
-
 ** Set notes to done tasks
    #+begin_src emacs-lisp
      (setq org-log-done 'note)
    #+end_src
 
-** Add fancy bullets
+** Add LaTeX binaries to PATH
    #+begin_src emacs-lisp
-     (require 'org-bullets)
-     (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+     (setenv "PATH" (concat "/Library/TeX/texbin:" (getenv "PATH")))
+     (setq exec-path (append '("/Library/TeX/texbin") exec-path))
+   #+end_src
+
+** Scale LaTeX mode equations
+   #+begin_src emacs-lisp
+    (setq org-format-latex-options (plist-put org-format-latex-options :scale .8))
+    (setq org-latex-create-formula-image-program 'dvisvgm)
+   #+end_src
+
+** Fragment toggle activator (this makes fragments become text when they're hovered over).
+   #+begin_src emacs-lisp
+     (add-hook 'org-mode-hook 'org-fragtog-mode)
+   #+end_src
+
+* Other random stuff
+** Set up spell checking
+   #+begin_src emacs-lisp
+     (setq ispell-program-name "/usr/local/bin/aspell")
    #+end_src
