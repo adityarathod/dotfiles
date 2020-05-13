@@ -42,3 +42,4 @@ bindkey "\e\e[C" forward-word
 
 # Part 5: Dotfile configuration
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+compdef dotfiles='git'
