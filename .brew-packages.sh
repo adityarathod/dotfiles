@@ -12,7 +12,7 @@ brew upgrade
 brew install antigen
 # GnuPG: GPG implementation
 brew install gnupg
-# ISpell: Spell checker
+# ASpell: Spell checker
 brew install aspell
 
 # Part 3: Install casks

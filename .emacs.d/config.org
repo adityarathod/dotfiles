@@ -23,6 +23,12 @@
        (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
    #+end_src
 
+** Add =ox-clip= to allow for formatted copying of org text
+   #+begin_src emacs-lisp
+     (use-package ox-clip
+       :ensure t)
+   #+end_src
+
 * Hooks
 ** After init hook to maximize window
    #+begin_src emacs-lisp
@@ -43,7 +49,7 @@
 
 ** Custom font
    #+begin_src emacs-lisp
-     (set-default-font "-*-Fira Code-normal-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+     (set-default-font "-*-Fira Code-normal-normal-normal-*-14-*-*-*-m-0-iso10646-1")
    #+end_src
 
 ** Disable menubar
@@ -61,14 +67,20 @@
      (load-theme 'snazzy t)
    #+end_src
 
-** Add snippets
+** Enable snippets
    #+begin_src emacs-lisp
      (yas-global-mode 1)
    #+end_src
 
 ** Add line numbers for sanity
    #+begin_src emacs-lisp
-     (display-line-numbers-mode)
+     (global-display-line-numbers-mode)
+   #+end_src
+
+** Set default cursor type and color
+   #+begin_src emacs-lisp
+     (setq-default cursor-type 'box)
+     (set-cursor-color "#eeeeee")
    #+end_src
 
 * Add some extra org-mode keybinds 

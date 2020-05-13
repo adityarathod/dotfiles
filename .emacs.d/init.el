@@ -19,7 +19,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (gnu-elpa-keyring-update auto-correct org-fragtog yasnippet-snippets yasnippet auctex cdlatex org-preview-html org-bullets org snazzy-theme)))
+    (ox-clip key-quiz gnu-elpa-keyring-update auto-correct org-fragtog yasnippet-snippets yasnippet auctex cdlatex org-preview-html org-bullets org snazzy-theme)))
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
