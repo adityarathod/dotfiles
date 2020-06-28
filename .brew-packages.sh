@@ -14,6 +14,16 @@ brew install antigen
 brew install gnupg
 # ASpell: Spell checker
 brew install aspell
+# Youtube-DL: Video downloader
+brew install youtube-dl
+# FFmpeg: Video converter
+brew install ffmpeg
+# Python 3
+brew install python3
+# NodeJS
+brew install node
+# fzf (powerful fuzzy finder)
+brew install fzf
 
 # Part 3: Install casks
 # VS Code
@@ -27,8 +37,6 @@ brew cask install emacs-mac
 brew cask install flux
 # Dropbox
 brew cask install dropbox
-# MacTeX (needed for org-mode LaTeX integration)
-brew cask install mactex
 # Fira Code programming font (also used in my Emacs config)
 brew tap homebrew/cask-fonts
 brew cask install font-fira-code
