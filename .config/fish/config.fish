@@ -28,8 +28,8 @@ abbr -a o "open"
 # Skim.app
 alias skim="open -a Skim"
 
-# SPARK_HOME configuration
-export SPARK_HOME="/Users/aditya/spark-31"
+# bat
+alias cat="bat"
 
 # XDG base directories
 export XDG_CONFIG_HOME="/Users/aditya/.config"
@@ -42,15 +42,3 @@ set --export PATH $HOME/.cargo/bin $PATH
 
 # Initalize starship.rs
 starship init fish | source
-
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
-    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
-end
-# <<< conda initialize <<<
-
-# bun
-set --export BUN_INSTALL "$HOME/.bun"
-set --export PATH $BUN_INSTALL/bin $PATH
