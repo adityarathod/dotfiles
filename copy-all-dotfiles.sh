@@ -17,7 +17,7 @@ fi
 cp ~/.tmux.conf "$REPO_ROOT"
 
 # nvim
-cp ~/.config/nvim/init.lua "$REPO_ROOT/.config/nvim"
+cp -r ~/.config/nvim "$REPO_ROOT/.config"
 
 # fish
 cp ~/.config/fish/config.fish "$REPO_ROOT/.config/fish"

@@ -1,2 +1,4 @@
 .DS_Store
 
+# ignore nvim lazy lockfile
+lazy-lock.json
