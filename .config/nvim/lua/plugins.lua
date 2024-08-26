@@ -14,6 +14,7 @@ spec('plugins/rust')
 spec('plugins/telescope')
 spec('plugins/lsp_zero')
 spec('plugins/mason')
+spec('plugins/nvim-tree')
 
 require('lazy').setup(LAZY_PLUGIN_SPEC)
 

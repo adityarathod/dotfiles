@@ -23,6 +23,10 @@ vim.keymap.set('n', '<C-K>', '<C-W><C-K>')
 vim.keymap.set('n', '<C-L>', '<C-W><C-L>')
 vim.keymap.set('n', '<C-H>', '<C-W><C-H>')
 
+-- Tree keymaps
+vim.keymap.set('n', 'tt', ':NvimTreeToggle<CR>', { silent = true })
+vim.keymap.set('n', 'tr', ':NvimTreeFocus<CR>', { silent = true })
+
 -- (experimental) close the current tab and open the buffer in a split
 vim.keymap.set('n', '<leader>ts', ':BufferClose<CR>:split<CR>:b#<CR>', { silent = true })
 
